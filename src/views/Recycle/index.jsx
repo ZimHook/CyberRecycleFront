@@ -1,6 +1,5 @@
 import { Button, Input, Tooltip, message } from "antd";
 import { useState } from "react";
-import Web3 from "web3";
 import { useAccount, useChainId } from "wagmi";
 import { WagmiConfig, chains } from "../../provider/EvmProvider";
 import {
@@ -8,7 +7,7 @@ import {
   readContract,
   writeContract,
 } from "wagmi/actions";
-import { erc20Abi } from "viem";
+import { erc20Abi, isAddress } from "viem";
 import { InfoCircleOutlined } from "@ant-design/icons";
 import { burnToken, getTokenReceiver } from "../../api";
 import ProgressModal from "./ProgressModal";
@@ -28,10 +27,7 @@ const Recycle = () => {
   const [status, setStatus] = useState();
 
   const checkToken = async () => {
-    const web3 = new Web3(
-      chains.find((item) => item.id === chainId).rpcUrls.default.http[0]
-    );
-    if (!web3.utils.isAddress(inputValue)) {
+    if (!isAddress(inputValue)) {
       message.info("Addres Not Valid");
       return;
     }
