@@ -3,19 +3,26 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
+    "@ant-design/icons": "^5.3.7",
+    "@rainbow-me/rainbowkit": "^2.1.2",
+    "@tanstack/react-query": "^5.40.0",
+    "antd": "^5.17.4",
+    "axios": "^1.7.2",
+    "eth-balance-checker": "^0.2.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-router-dom": "^6.23.1",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "recoil": "^0.7.7",
+    "viem": "2.x",
+    "wagmi": "^2.9.8",
+    "web3": "^4.9.0",
+    "web3-validator": "^2.0.6"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "react-app-rewired start",
+    "dev": "react-app-rewired start",
+    "build": "react-app-rewired build"
   },
   "eslintConfig": {
     "extends": [
@@ -34,5 +41,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "postcss-loader": "^8.1.1",
+    "react-app-rewired": "^2.2.1",
+    "tailwindcss": "^3.4.3"
   }
 }
