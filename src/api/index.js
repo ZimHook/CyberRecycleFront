@@ -1,6 +1,6 @@
 import axios from "axios"
 
-const apiHost = 'http://localhost:4000'
+const apiHost = 'https://cyber-recycle-backend.vercel.app'
 
 export const getTokenReceiver = async() => {
   const res = await axios.get(apiHost + '/receiver')
